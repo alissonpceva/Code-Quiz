@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url("../images/bg.gif");
+    width: 100%;
+    height: 3rem;
+    border-top: 2px outset #000000;
+    border-bottom: 2px outset #000000;
+}
+
+.neon {
+    justify-self: flex-end;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+h1 {
+    position: absolute;
+    right: 2.5rem;
+    top: 4.25rem;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+    justify-content: center;
+}
+
+main * {
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+button {
+    height: min-content;
+    width: min-content;
+    padding: .5rem 1rem;
+    background: url("../images/bg.gif");
+    box-shadow: 0 0 0 1px black;
+    text-shadow: 0 0 1px black;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+
+#start {
+    margin-top: 4rem;
+    background-color: rgb(159, 231, 159);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.preamble {
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(227, 14, 14);
+    text-align: center;
+}
+
+.quiz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: fit-content;
+    width: 40rem;
+}
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; 
+    width: 100%;
+    height: min-content;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1rem 0;
+}
+.answer {
+    background-color: rgba(117, 99, 218, 0.6);
+    width: 60%;
+    margin: .5rem 0;
+}
+
+@keyframes move{
+    0%   {
+        right: 2.5rem;
+        top: 4.25rem;
+        color: rgb(179, 0, 0);
+        text-shadow:
+        0 0 1px #fff,
+        0 0 25px #ffebb7,
+        0 0 82px #ffebb7,
+        0 0 92px #ffebb7,
+        0 0 102px #ffebb7,
+        0 0 2px #000;
+    }
+    50% {
+        color: rgba(255, 251, 0, 0);
+        text-shadow:
+        0 0 1px rgba(255, 255, 255, 0),
+        0 0 25px #ffebb700,
+        0 0 82px #ffebb700,
+        0 0 92px #ffebb700,
+        0 0 102px #ffebb700,
+        0 0 2px rgba(0, 0, 0, 0);
+    }
+    100%{
+        right: 2.5rem;
+        top: -3rem;
+    }
+}
+
+.deduction {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.scoreboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.75);
+    height: min-content;
+    padding-bottom: 2rem;
+    width: 40rem;
+}
+.heading {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: min-content;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%
+}
+.rackLeftEl {
+    height: fit-content;
+    width: 60%;
+    text-align: left;
+    padding-left: 2rem;
+}
+.rackRightEl {
+    height: fit-content;
+    text-align: right;
+    width: 40%;
+    border-left: solid rgba(0, 0, 0, 0.20) 3px;
+    padding-right: 2.5rem;
+}
+.correctL, 
+.bonusL, 
+.totalL{
+    display: block;
+    padding: .2rem 1rem;
+}
+.correctR, 
+.bonusR, 
+.totalR{
+    display: block;
+    padding: .2rem 1rem;
+}
+
+.totalL,
+.totalR {
+    border-top: solid 3px rgb(0, 0, 0, 0.20);
+    margin-top: .5rem;
+    padding-top: 1rem;
+}
+
+.initials-prompt {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    color: black;
+    margin-bottom: -1rem;
+}
+
+.inital-entry{
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 2rem;
+    width: 4.3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+::placeholder{
+    color: gray
+}
+
+input:focus, 
+textarea:focus,
+select:focus
+    {
+    outline: none;
+}
+
+.submit {
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    margin: 2rem 100%;
+    margin-bottom: 1rem;
+}
+
+.return {
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    margin: 1rem 100%;
+    margin-bottom: 0;
+}
+
+.highscores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.75);
+    height: fit-content;
+    width: 100%;
+    padding: 1rem;
+}
+.local-initials {
+    white-space: pre-line;
+    text-align: right;
+    border-right:solid 3px rgba(0, 0, 0, .25);
+    padding: 0 1rem;
+    padding-right: 3rem;
+    line-height: 2.5rem;
+    width: 10%;
+}
+.local-scores {
+    white-space: pre-line;
+    text-align: right;
+    padding: 0 1rem;
+    line-height: 2.5rem;
+    width: 10%;
+}
+
+.scores {
+    color: #141413;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(182, 153, 210);
+}
+
+.scores button {
+    color:#140148;
+    width: fit-content;
+    background: rgba(214, 28, 28, 0.205);
+    padding: .15rem .5rem;
+}
+
+@media only screen and (max-width: 440px) {
+    button,
+    .main *,
+    .question,
+    .scoreboard *,
+    footer *
+    {
+        font-size: 1rem ;
+    }
+    .rackLeftEl {
+        width: 65%;
+        padding: 0;
+    }
+    .rackRightEl {
+        width: 35%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .banner{
+        justify-content: space-around;
+    }
+    .banner img {
+        margin: 0;
+    }
+    h1 {
+        right: auto;
+        top: 11rem;
+    }
+    .brick:nth-of-type(2){
+        height: 7.5rem;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    button,
+    .main *,
+    .question,
+    .scoreboard *  
+    {
+        font-size: .75rem ;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    button,
+    .main *,
+    .question,
+    .scoreboard *
+    {
+        font-size: .65rem ;
+    }
+}
